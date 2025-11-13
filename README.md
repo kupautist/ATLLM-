@@ -25,22 +25,10 @@ python -m pip install --upgrade pip setuptools wheel
 ```
 
 3. Install dependencies:
-
-   **Option A: With FAISS (recommended for large volumes)**
    ```bash
    pip install -r requirements.txt
    ```
-
-   **Option B: Without FAISS (if compilation issues)**
-   ```bash
-   pip install -r requirements_simple.txt
-   ```
    Additionally, you can configure `document_store_simple.py` for your needs (import already configured in `bot_simple.py`)
-
-   **Or use installation script for Windows:**
-   ```bash
-   install.bat
-   ```
 
 4. Create `.env` file based on `.env.example`:
 ```bash
@@ -50,12 +38,6 @@ cp .env.example .env
 5. Fill in environment variables:
    - `OPENAI_API_KEY` - your OpenAI API key
    - `TELEGRAM_BOT_TOKEN` - bot token from @BotFather
-
-### Troubleshooting Installation
-
-If you have issues installing NumPy on Windows:
-1. Use precompiled wheels: `python -m pip install numpy --only-binary :all:`
-2. Then install remaining dependencies: `pip install -r requirements_simple.txt`
 
 ## Running
 
@@ -121,15 +103,9 @@ ForKupa/
 │   └── check_installation.py  # Dependency check
 │
 ├── run_bot.py             # Bot launcher
-├── requirements.txt       # Dependencies (with FAISS)
-├── requirements_simple.txt  # Dependencies (without FAISS)
+├── requirements.txt       # Dependencies
 └── README.md
 ```
-
-### Storage Version Selection
-
-- **With FAISS** (`document_store.py`) - faster for large data volumes, requires compilation
-- **Without FAISS** (`document_store_simple.py`) - easier to install, works on pure NumPy, sufficient for small volumes
 
 ### Supported Formats
 
@@ -218,29 +194,8 @@ In `.env` you can configure:
 - `CONVERSATIONS_DIR` - directory for conversation history
 - `LOG_LEVEL` - logging level (INFO, DEBUG, WARNING, ERROR)
 
-## Usage Examples
-
-**Upload document:**
-```
-Send file lecture_notes.txt or document.pdf
-```
-
-**Question:**
-```
-What are the grading rules in the course?
-```
-
-**Answer:**
-```
-Bot will find relevant information and give an accurate answer based on documents.
-```
-
 ## Requirements
 
 - Python 3.8+
 - OpenAI API key
 - Telegram Bot Token
-
-## License
-
-MIT
