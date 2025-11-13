@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Какой дедлайн финального проекта?",
+    "expected_doc_titles": ["lec8", "Project"],
+    "ground_truth_answer": "11 ноября 2024 года"
+  },
+  {
+    "question": "Сколько процентов стоит Working RAG в финальном проекте?",
+    "expected_doc_titles": ["lec8"],
+    "ground_truth_answer": "30 процентов"
+  },
+  {
+    "question": "Что такое Multi-Representation индексирование?",
+    "expected_doc_titles": ["lec9", "Multi-Representation"],
+    "ground_truth_answer": "Это метод индексирования, который использует две системы: vector store для summaries и doc store для полных документов. Сначала создается summary документа, делается embedding summary для retrieval, а полный документ хранится отдельно."
+  },
+  {
+    "question": "Какие команды доступны в этом боте?",
+    "expected_doc_titles": ["README", "help"],
+    "ground_truth_answer": "/start, /help, /docs, /add_doc, /delete, /clear"
+  },
+  {
+    "question": "Что такое RAPTOR?",
+    "expected_doc_titles": ["lec9", "RAPTOR"],
+    "ground_truth_answer": "RAPTOR (Recursive Abstractive Processing for Tree-Organized Retrieval) - это метод, который строит иерархический индекс для обработки различных типов запросов, кластеризуя документы и создавая summaries на разных уровнях абстракции."
+  },
+  {
+    "question": "Какие метрики используются для оценки в финальном проекте?",
+    "expected_doc_titles": ["lec8"],
+    "ground_truth_answer": "Idea 10%, Working RAG 30%, Working Modular RAG 10%, Best practice 20%, Automated Benchmark test 10%, Deployment & UI 20%"
+  },
+  {
+    "question": "В чем преимущество ColBERT?",
+    "expected_doc_titles": ["lec9", "ColBERT"],
+    "ground_truth_answer": "ColBERT использует token-level embeddings вместо одного вектора для всего документа, что позволяет захватывать более детальные семантические отношения и лучше обрабатывать длинные документы."
+  },
+  {
+    "question": "Где можно задеплоить приложение согласно лекции 8?",
+    "expected_doc_titles": ["lec8", "deployment"],
+    "ground_truth_answer": "Vercel, Github pages, render.com"
+  },
+  {
+    "question": "Что изучалось в лекции 3?",
+    "expected_doc_titles": ["lec8"],
+    "ground_truth_answer": "Inference technique: vectorization и chunking"
+  },
+  {
+    "question": "Какой минимальный размер datasource требуется для проекта?",
+    "expected_doc_titles": ["lec8"],
+    "ground_truth_answer": "Минимум 200 страниц (документов или веб-страниц)"
+  }
+]
